@@ -1,7 +1,7 @@
 #![allow(unused_imports)]
 use qr_pake_protocol_executors::{
-    start_server, DefaultStorage, Storage, DEFAULT_IP, DEFAULT_LOGIN_THRESHOLD,
-    DEFAULT_LOGIN_WINDOW, DEFAULT_PORT, DEFAULT_TIMEOUT
+    DEFAULT_IP, DEFAULT_LOGIN_THRESHOLD, DEFAULT_LOGIN_WINDOW, DEFAULT_PORT, DEFAULT_TIMEOUT,
+    DefaultStorage, Storage, start_server,
 };
 use qr_pake_protocols::{KemAeServer, OcakeServer, TkServer};
 use std::sync::Arc;
@@ -18,7 +18,7 @@ async fn main() {
         DEFAULT_PORT,
         DEFAULT_LOGIN_THRESHOLD,
         DEFAULT_LOGIN_WINDOW,
-        DEFAULT_TIMEOUT
+        DEFAULT_TIMEOUT,
     )
     .await
     .expect("Server failed to start");

@@ -1,5 +1,5 @@
 #![allow(unused_imports)]
-use qr_pake_protocol_executors::{login, register, DEFAULT_IP, DEFAULT_PORT};
+use qr_pake_protocol_executors::{DEFAULT_IP, DEFAULT_PORT, login, register};
 use qr_pake_protocols::{AvailableVariants::*, KemAeClient, OcakeClient, TkClient};
 
 #[tokio::main]

@@ -1,0 +1,12 @@
+[package]
+name = "test_framework_api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+qr_pake_protocols = { path = "../qr_pake_protocols" }
+qr_pake_protocol_executors = { path = "../qr_pake_protocols/pake_protocol_executors" }
+serde_json = "1.0.140"
+tokio = { version = "1.45.0", features = ["rt", "macros"] }
+rusqlite = { version = "0.36.0", features = ["bundled"] }
+anyhow = "1.0.98"

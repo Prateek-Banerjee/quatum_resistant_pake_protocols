@@ -1,5 +1,5 @@
 #![allow(unused_imports)]
-use qr_pake_protocol_executors::{login, register, DEFAULT_IP, DEFAULT_PORT};
+use qr_pake_protocol_executors::{DEFAULT_IP, DEFAULT_PORT, login, register};
 use qr_pake_protocols::{AvailableVariants::*, KemAeClient, KemChoice::*, OcakeClient, TkClient};
 use std::{thread, time::Duration};
 
@@ -41,7 +41,7 @@ async fn main() {
     let anunita_instance = register::<OcakeClient>(
         client_anunita,
         client_password,
-        Recommended,
+        Paranoid,
         None,
         DEFAULT_IP,
         DEFAULT_PORT,
