@@ -1,0 +1,62 @@
+[package]
+name = "qr_pake_protocols"
+version = "0.1.0"
+authors = ["Prateek Banerjee"]
+edition = "2021"
+categories = ["cryptography"]
+keywords = ["cryptography"]
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+# Cryptographic Dependencies
+aes = "0.8.4"
+ctr = "0.9.2"
+aes-gcm = "0.10.3"
+sha2 = "0.10.9"
+sha3 = "0.10.8"
+rand = "0.8.5"
+ml-kem = { version = "0.2.1", features = ["deterministic"] }
+zeroize = "1.8.1"
+rand_core = "=0.9.3"
+frodo-kem-rs = { version = "0.5.0" }
+
+# Non-Cryptographic Dependencies
+tokio = { version = "1.45.0", features = ["rt", "macros"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+convert-base = "1.1.2"
+strum = "0.27.1"
+strum_macros = "0.27.1"
+
+[dev-dependencies]
+qr_pake_protocol_executors = { path = "pake_protocol_executors" }
+stats-ci = "0.1.1"
+rust_xlsxwriter = "0.89.1"
+
+[workspace]
+members = [".", "pake_protocol_executors"]
+
+[[bench]]
+name = "kem_ae_pake"
+path = "benches/benchmark_kem_ae_pake.rs"
+harness = false
+
+[[bench]]
+name = "tk_pake"
+path = "benches/benchmark_tk_pake.rs"
+harness = false
+
+[[bench]]
+name = "tk_pake_auth"
+path = "benches/benchmark_tk_pake_auth.rs"
+harness = false
+
+[[bench]]
+name = "ocake_pake"
+path = "benches/benchmark_ocake_pake.rs"
+harness = false
+
+[profile.release]
+debug = 1

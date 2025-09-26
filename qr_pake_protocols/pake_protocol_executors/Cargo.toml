@@ -1,0 +1,23 @@
+[package]
+name = "qr_pake_protocol_executors"
+version = "0.1.0"
+authors = ["Prateek Banerjee"]
+edition = "2021"
+categories = ["cryptography"]
+keywords = ["cryptography"]
+
+[dependencies]
+qr_pake_protocols = { path = "../" }
+tokio = { version = "1.45.0", features = [
+    "rt",
+    "rt-multi-thread",
+    "sync",
+    "macros",
+    "net",
+    "io-util",
+    "time"
+] }
+serde_json = "1.0.140"
+anyhow = "1.0.98"
+async-trait = "0.1.88"
+sha2 = "0.10.9"
