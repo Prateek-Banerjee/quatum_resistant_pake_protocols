@@ -1,6 +1,6 @@
 # Overview of the Project
 
-This project comprises of the implementation of three recent propositions of quantum-resistant PAKE Protocols. They are referred in the implementation and the [report](https://github.com/Prateek-Banerjee/quatum_resistant_pake_protocols/blob/master/Master%20Thesis%20Report.pdf) with the following names as per the following resources:
+This project comprises of the implementation of three recent propositions of quantum-resistant PAKE Protocols in **Rust v1.87.0**. They are referred in the implementation and the [report](https://github.com/Prateek-Banerjee/quatum_resistant_pake_protocols/blob/master/Master%20Thesis%20Report.pdf) with the following names as per the following resources:
 
 1) [TK-PAKE](https://iacr.steepath.eu/2023/1334-AGenericConstructionofTightlySecurePasswordbasedAuthenticatedKeyExchange.pdf)
 2) [*Modified* OCAKE-PAKE](https://eprint.iacr.org/2023/1368.pdf)
